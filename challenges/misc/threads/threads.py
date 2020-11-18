@@ -4,7 +4,7 @@ import re
 
 
 def check_safe_dir(account):
-    safe_dir = os.path.realpath("./state/")
+    safe_dir = os.path.realpath("state/")
     if os.path.commonprefix((os.path.realpath(f"state/{account}.txt"), safe_dir)) != safe_dir:
         return False
     return True
@@ -30,7 +30,7 @@ def buy_flag(account):
         write_data(account, bank - 100, flags + 1)
         print(f"Bought flag! You have {flags + 1} flags!")
         if flags == 9:
-            print("Flag")
+            print("Flag!", open("flag.txt").read())
     else:
         print("You're out of money!")
         os.remove(f"state/{account}.txt")

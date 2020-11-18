@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  pods:
+    build: .
+    ports:
+      - "1022-1122:22"
