@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  threads:
+    build: threads
+    ports:
+      - "1234:1234"
+  pickle:
+    build: pickle
+    ports:
+      - "1236:1236"
