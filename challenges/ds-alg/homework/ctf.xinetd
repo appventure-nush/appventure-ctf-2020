@@ -1,0 +1,14 @@
+service ctf
+{
+    disable     = no
+    cps			= 0 0
+    per_source	= 25
+    port		= 4200
+    protocol	= tcp
+    rlimit_cpu	= 25
+    server		= /usr/local/bin/python
+    server_args	= -u homework.py
+    type		= UNLISTED
+    user		= ctf
+    wait		= no
+}
