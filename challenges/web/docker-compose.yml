@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  js-weird:
+    build: js-weird
+    ports:
+      - "1237:1237"
+  xss:
+    build: xss
+    ports:
+      - "1238:1238"
