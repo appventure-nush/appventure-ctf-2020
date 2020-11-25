@@ -9,3 +9,8 @@ services:
     build: pickle
     ports:
       - "1236:1236"
+  mademadics:
+    build: mademadics
+    ports:
+      - "1239:1239"
+
