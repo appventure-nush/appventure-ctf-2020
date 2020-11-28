@@ -1,6 +1,7 @@
 const app = require("express")();
 const flag = require("fs").readFileSync("flag.txt");
 const flag2 = require("fs").readFileSync("flag2.txt");
+const flag3 = require("fs").readFileSync("flag3.txt");
 
 app.get("/", (req, res) => {
   res.end(require("fs").readFileSync("index.js"));
@@ -39,6 +40,39 @@ app.get("/flag2", (req, res) => {
         res.end(flag2)
         return;
       }
+    }
+  } catch (e) {
+    console.log(e.message)
+    res.end("Something bad happened");
+    return;
+  }
+  res.end("Ooops");
+});
+
+app.get("/flag3", (req, res) => {
+  try {
+    console.log("3", req.query);
+    const meep = new Map(JSON.parse(req.query.o));
+    const dict = {};
+    meep.forEach((key, val) => {
+      dict[key] = val;
+    });
+    const keys = Object.keys(dict).sort();
+    const ints = keys.filter(x => parseInt(x)).map(parseInt);
+    if (ints.length < 2) {
+      return;
+    }
+    const string = keys.filter(x => !parseInt(x)).filter(x => x.length < 3).concat(ints).join("").split("");
+    let out = ""
+    string.forEach((a, b) => {
+      if (parseInt(b) % 3 != 2) {
+        out += a
+      }
+    });
+    if (out.toLowerCase() === "banana") {
+      console.log("Worked3", meep);
+      res.end(flag3)
+      return;
     }
   } catch (e) {
     console.log(e.message)
