@@ -13,6 +13,7 @@ Upon closer look, you notice a QR code at the top left corner. Through trial and
 ![](sol_qr_code_recovery.png)
 
 You may find that even though the QR code can be made to be pretty obvious, most scanners are not able to pick up the QR code due to the noise. In that case, you can easily trace out the code to get the following:
+
 ![](sol_qr_code.png)
 
 Now, you can scan it and get the following base64 string:
