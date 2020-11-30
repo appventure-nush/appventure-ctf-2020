@@ -1,1 +1,1 @@
-ctf{flag}
+ctf{j50n_b35t_53r14l1z4t10n_25081ebd}

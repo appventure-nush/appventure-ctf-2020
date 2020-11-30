@@ -31,6 +31,8 @@ if __name__ == '__main__':
     #
     # If it produces a different value, check with organizers
     inp = input("Enter text to encrypt: ")
+    if len(inp) != 23:
+        print("That is not the flag!")
     for i in inp:
         if i not in string.ascii_letters + string.digits + "_{}":
             raise Exception("Invalid characters")
@@ -40,3 +42,5 @@ if __name__ == '__main__':
     for block in blocks:
         out += encrypt(block)
     print(out)
+    # Encrypted flag:
+    # 684154740b2a2e2c3a7f164e344f75377d0e31581104692e307f247a1b175c51

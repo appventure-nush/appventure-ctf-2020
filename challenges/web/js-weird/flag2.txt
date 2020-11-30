@@ -1,2 +1,1 @@
-ctf{flag2}
-
+ctf{0n3_plu5_0n3_15_3l3v3n}

@@ -1,1 +1,1 @@
-ctf{flag2}
+ctf{th47_w0rk3d_3v3ntu4lly}

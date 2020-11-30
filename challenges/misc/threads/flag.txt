@@ -1,1 +1,1 @@
-ctf{flag}
+ctf{th15_c0d3_15_t3rr1bl3}

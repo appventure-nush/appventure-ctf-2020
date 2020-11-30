@@ -1,1 +1,1 @@
-ctf{flag1}
+ctf{t00_345y_f0r_y0u}

@@ -1,2 +1,1 @@
-ctf{flag3}
-
+ctf{why_j4v45cr1p7_why}

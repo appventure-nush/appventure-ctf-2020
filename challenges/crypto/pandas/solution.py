@@ -26,8 +26,8 @@ def decrypt(enc, seed):
     return dec
 
 
-def decrypt2():
-    inp = "261e663a111115760b5d216f4e7a253f7d0e31581104692e6e763f6f074c0851"
+if __name__ == '__main__':
+    inp = "684154740b2a2e2c3a7f164e344f75377d0e31581104692e307f247a1b175c51"
     decrypted = ""
     blocks = [inp[i:i + 32] for i in range(0, len(inp), 32)]
     for seed in string.ascii_letters + string.digits + "_{}":
@@ -37,7 +37,5 @@ def decrypt2():
             break
     decrypted += decrypt(blocks[1], "0")
     print(decrypted)
-
-
-if __name__ == '__main__':
-    decrypt2()
+    # Padded: ctf{p4nd45_b16_c000000000onfu53}
+    # Flag: ctf{p4nd45_b16_confu53}
