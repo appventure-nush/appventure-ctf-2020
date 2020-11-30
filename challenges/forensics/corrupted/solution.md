@@ -8,15 +8,17 @@ You find many photos, but no sign of the flag. The challenge description hints u
 
 ![](sol_cat.jpg)
 
-Upon closer look, you notice a qr code at the top left corner. Through trial and error, you filter the image by the 3 least significant bits, and a further increase in contrast, to be able to comfortably see the qr code.
+Upon closer look, you notice a QR code at the top left corner. Through trial and error, you filter the image by the 3 least significant bits, and a further increase in contrast, to be able to comfortably see the QR code.
 
 ![](sol_qr_code_recovery.png)
 
-You may find that most scanners are not able to pick up the qr code. However, you can easily trace out the qr code and get the following:
+You may find that even though the QR code can be made to be pretty obvious, most scanners are not able to pick up the QR code due to the noise. In that case, you can easily trace out the code to get the following:
 ![](sol_qr_code.png)
 
 Now, you can scan it and get the following base64 string:
-```Y3RmeytoNG5rNV9mMHJfaDNscDFuNl90MF9mMXghfQ==```
+
+`Y3RmeytoNG5rNV9mMHJfaDNscDFuNl90MF9mMXghfQ==`
 
 Decode it and you get the flag:
-```ctf{+h4nk5_f0r_h3lp1n6_t0_f1x!}```
+
+`ctf{+h4nk5_f0r_h3lp1n6_t0_f1x!}`
