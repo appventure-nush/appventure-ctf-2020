@@ -60,6 +60,7 @@ app.get("/flag3", (req, res) => {
     const keys = Object.keys(dict).sort();
     const ints = keys.filter(x => parseInt(x)).map(parseInt);
     if (ints.length < 2) {
+      res.end("Ooops");
       return;
     }
     const string = keys.filter(x => !parseInt(x)).filter(x => x.length < 3).concat(ints).join("").split("");

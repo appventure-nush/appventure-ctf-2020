@@ -7,7 +7,7 @@ service ctf
     protocol	= tcp
     rlimit_cpu	= 25
     server		= /usr/local/bin/python
-    server_args	= -u main.py
+    server_args	= -u /chal/main.py
     type		= UNLISTED
     user		= ctf
     wait		= no

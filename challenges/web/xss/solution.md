@@ -24,6 +24,8 @@ Payload:
 In level 3, there is a restrictive CSP. However, `*.google.com` is allowed, allowing for JSONP to be exploited.  
 Even though we have RCE, we are not done as we are unable to connect to other sites. We can leverage the site itself,
 using fetch to create a note.
+
+Note: host must be localhost and not the IP because the chrome bot loads pages form localhost.
 Payload:
 ```html
 <script
