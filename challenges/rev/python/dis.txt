@@ -1,0 +1,102 @@
+Function A:
+  5           0 LOAD_CLOSURE             0 (ints)
+              2 BUILD_TUPLE              1
+              4 LOAD_CONST               1 (<code object <listcomp> at 0x00000241845EE660, file "[redacted]", line 5>)
+              6 LOAD_CONST               2 ('a.<locals>.<listcomp>')
+              8 MAKE_FUNCTION            8
+             10 LOAD_DEREF               0 (ints)
+             12 GET_ITER
+             14 CALL_FUNCTION            1
+             16 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x00000241845EE660, file "[redacted]", line 5>:
+  5           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                20 (to 26)
+              6 STORE_FAST               1 (x)
+              8 LOAD_FAST                1 (x)
+             10 LOAD_GLOBAL              0 (len)
+             12 LOAD_DEREF               0 (ints)
+             14 CALL_FUNCTION            1
+             16 BINARY_ADD
+             18 LOAD_CONST               0 (50)
+             20 BINARY_SUBTRACT
+             22 LIST_APPEND              2
+             24 JUMP_ABSOLUTE            4
+        >>   26 RETURN_VALUE
+Function B:
+  9           0 LOAD_CONST               1 (<code object <listcomp> at 0x000002418498FF60, file "[redacted]", line 9>)
+              2 LOAD_CONST               2 ('b.<locals>.<listcomp>')
+              4 MAKE_FUNCTION            0
+              6 LOAD_FAST                0 (ints)
+              8 GET_ITER
+             10 CALL_FUNCTION            1
+             12 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x000002418498FF60, file "[redacted]", line 9>:
+  9           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                12 (to 18)
+              6 STORE_FAST               1 (x)
+              8 LOAD_FAST                1 (x)
+             10 LOAD_CONST               0 (10)
+             12 BINARY_SUBTRACT
+             14 LIST_APPEND              2
+             16 JUMP_ABSOLUTE            4
+        >>   18 RETURN_VALUE
+Function C:
+ 13           0 LOAD_CONST               1 (<code object <listcomp> at 0x00000241849B45D0, file "[redacted]", line 13>)
+              2 LOAD_CONST               2 ('c.<locals>.<listcomp>')
+              4 MAKE_FUNCTION            0
+              6 LOAD_FAST                0 (string)
+              8 GET_ITER
+             10 CALL_FUNCTION            1
+             12 STORE_FAST               1 (ints)
+
+ 14          14 LOAD_CONST               3 (<code object <listcomp> at 0x00000241849B4270, file "[redacted]", line 14>)
+             16 LOAD_CONST               2 ('c.<locals>.<listcomp>')
+             18 MAKE_FUNCTION            0
+             20 LOAD_GLOBAL              0 (zip)
+             22 LOAD_GLOBAL              1 (a)
+             24 LOAD_FAST                1 (ints)
+             26 CALL_FUNCTION            1
+             28 LOAD_GLOBAL              2 (b)
+             30 LOAD_FAST                1 (ints)
+             32 CALL_FUNCTION            1
+             34 CALL_FUNCTION            2
+             36 GET_ITER
+             38 CALL_FUNCTION            1
+             40 STORE_FAST               2 (x)
+
+ 15          42 LOAD_GLOBAL              3 (bytes)
+             44 LOAD_FAST                2 (x)
+             46 CALL_FUNCTION            1
+             48 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x00000241849B45D0, file "[redacted]", line 13>:
+ 13           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                12 (to 18)
+              6 STORE_FAST               1 (x)
+              8 LOAD_GLOBAL              0 (ord)
+             10 LOAD_FAST                1 (x)
+             12 CALL_FUNCTION            1
+             14 LIST_APPEND              2
+             16 JUMP_ABSOLUTE            4
+        >>   18 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x00000241849B4270, file "[redacted]", line 14>:
+ 14           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                20 (to 26)
+              6 UNPACK_SEQUENCE          2
+              8 STORE_FAST               1 (x)
+             10 STORE_FAST               2 (y)
+             12 LOAD_FAST                1 (x)
+             14 LOAD_CONST               0 (3)
+             16 BINARY_ADD
+             18 LOAD_FAST                2 (y)
+             20 BINARY_ADD
+             22 LIST_APPEND              2
+             24 JUMP_ABSOLUTE            4
+        >>   26 RETURN_VALUE

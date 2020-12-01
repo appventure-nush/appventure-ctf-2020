@@ -1,17 +1,17 @@
 from dis import dis
 
 
-def add(ints):
+def a(ints):
     return [x + len(ints) - 50 for x in ints]
 
 
-def add2(ints):
+def b(ints):
     return [x - 2 * 5 for x in ints]
 
 
-def main(string):
+def c(string):
     ints = [ord(x) for x in string]
-    x = [x + 3 + y for x, y in zip(add(ints), add2(ints))]
+    x = [x + 3 + y for x, y in zip(a(ints), b(ints))]
     return bytes(x)
 
 
@@ -28,7 +28,12 @@ def reverse(bytes):
 
 
 if __name__ == '__main__':
-    print(dis(main))
-    out = main("ctf{r4p1d_un5ch3dul3d_d154553mbly}")
-    print(out)
+    print("Function A:")
+    dis(a)
+    print("Function B:")
+    dis(b)
+    print("Function C:")
+    dis(c)
+    out = c("ctf{r4p1d_un5ch3dul3d_d154553mbly}")
+    print(out.hex())
     print(reverse(out))
