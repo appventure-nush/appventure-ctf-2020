@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  homework:
+    build: homework
+    ports:
+      - "4200:4200"
+  machine-learning:
+    build: machine-learning
+    ports:
+      - "4201:4200"

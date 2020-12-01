@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  babypwn:
+    build: babypwn
+    ports:
+      - "4202:4200"
