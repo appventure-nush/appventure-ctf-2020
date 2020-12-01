@@ -1,8 +1,8 @@
 # Corrupted solution
 
-Upon inspection of the corrupted file, you find that it likely simply has missing headers. Based off the file structure and the challenge description mentioning multiple images, you deduce that it's possibly a ZIP file.
+Based off the file structure and the challenge description mentioning multiple images, you deduce that it's possibly a ZIP file. Upon inspection, you notice that the headers for the file are partially missing, or more specifically, the first 2 bytes are missing.
 
-You add the zip file headers `PK` using a hex editor and unzip it.
+You add the zip file headers `PK` using a hex editor and proceed to unzip it.
 
 You find many photos, but no sign of the flag. The challenge description hints us towards the cat picture.
 
@@ -12,7 +12,7 @@ Upon closer look, you notice a QR code at the top left corner. Through trial and
 
 ![](sol_qr_code_recovery.png)
 
-You may find that even though the QR code can be made to be pretty obvious, most scanners are not able to pick up the QR code due to the noise. In that case, you can easily trace out the code to get the following:
+You may find that even though the QR code can be made to be pretty obvious, most scanners are not able to pick up the QR code due to the noise. In that case, you can easily trace out the code, plus with some good guesses based off standard QR code structures, to get the following:
 
 ![](sol_qr_code.png)
 

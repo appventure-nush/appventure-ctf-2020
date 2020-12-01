@@ -8,3 +8,5 @@ Can you help me retrieve them? Thanks a bunch!
 
 Flag format: `ctf{...}`
 
+Difficulty: Medium ~ Hard-ish
+

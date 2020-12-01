@@ -11,3 +11,5 @@ In OOP, we usually have classes. A purpose of classes is to allow for informatio
 Info and image source: infobrother.com
 
 Flag format: `ctf{...}`
+
+Difficulty: Easy
