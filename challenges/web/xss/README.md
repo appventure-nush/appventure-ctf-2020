@@ -15,6 +15,7 @@
 
 ## Notes 3
 > I've added a [CSP](https://developers.google.com/web/fundamentals/security/csp) to the site.  
-> Can't outsmart the browser can you?
+> Can't outsmart the browser can you?  
+> Tip: The admin visits the site on localhost:1238
 >
 > \<ip>:1238/3

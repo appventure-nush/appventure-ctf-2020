@@ -28,6 +28,6 @@ The final command is also executed after the other commands have completed.
 
 **Input**
 ```
-Account: aaaaaaaaaaaa!
+Account: aaaaaaaaaaaaaaaaaa!
 Commands: donate,buy,buy,buy,buy,buy,buy,buy,buy,buy,buy
 ```

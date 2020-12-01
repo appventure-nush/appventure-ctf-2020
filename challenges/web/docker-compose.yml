@@ -9,3 +9,7 @@ services:
     build: xss
     ports:
       - "1238:1238"
+  simple-web:
+    build: simple-web
+    ports:
+      - "1240:80"
