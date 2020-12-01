@@ -18,4 +18,6 @@ Oops, looks like the post was deleted. Now what?
 
 Flag format: `ctf{...}`
 
+Difficulty: Easyish - Medium
+
 Hint: thumbnail
