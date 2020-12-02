@@ -15,6 +15,8 @@ USER appventure
 
 RUN pip3 install pwntools
 
+RUN echo "ctf{w3lc0m3_t0_4ppv3ntur3_ctf_2020}" > /home/appventure/flag.txt
+
 USER root
 
 COPY sshd_config /etc/ssh/sshd_config
