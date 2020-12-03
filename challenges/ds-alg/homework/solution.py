@@ -28,6 +28,7 @@ while True:
         r.send(outputs)
         print(('replied', time.time()))
         line = r.recvline().decode()
+        line = r.recvline().decode()
         print('reply=', line)
     except TypeError as e:
         print(e, 'error', line)

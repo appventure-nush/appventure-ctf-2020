@@ -6,7 +6,7 @@ import subprocess
 
 # config
 TC_NUMBER = 20
-TIME_LIMIT = 5 + 55
+TIME_LIMIT = 5 + 120
 FLAG = [
     "ctf{e45y_p3AsY_M4cH1n3_g0ES_8rRRr}",
     "ctf{SIMPl1c17y_I5_8eAU7iFuL}"
