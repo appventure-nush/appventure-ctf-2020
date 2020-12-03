@@ -15,7 +15,7 @@ LIMIT = [
     200000,
     5000000
 ]
-DEBUG = True
+DEBUG = False
 
 def generate_testcase(MAX_N, tight=False):
     N = MAX_N if tight else random.randint(1, MAX_N)
