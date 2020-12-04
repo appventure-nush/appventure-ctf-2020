@@ -6,7 +6,7 @@ import subprocess
 
 # config
 TC_NUMBER = 10
-TIME_LIMIT = 5 + 55
+TIME_LIMIT = 5 + 80
 FLAG = "ctf{n0w_gO_d0_yOuR_hom3w0rk!}"
 DEBUG = False
 
